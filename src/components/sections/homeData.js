@@ -26,7 +26,7 @@ export const heroContent = {
 
 export const heroStats = [
   {
-    value: "1.96M+",
+    value: "1.91M+",
     label: "Call Center Audio Hours",
     note:  "English · Arabic · French · Swahili · Portuguese · Nepali · 35+ languages",
     wide:  false,
