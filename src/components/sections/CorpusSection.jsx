@@ -13,6 +13,8 @@ const badgeStyles = {
   rose: "bg-rose-950/50 text-rose-200 border-rose-500/25",
   indigo: "bg-indigo-950/50 text-indigo-200 border-indigo-500/25",
   violet: "bg-violet-950/50 text-violet-200 border-violet-500/25",
+  fuchsia: "bg-fuchsia-950/50 text-fuchsia-200 border-fuchsia-500/25",
+  lime: "bg-lime-950/50 text-lime-200 border-lime-500/25",
 };
 
 const modalityColors = {
@@ -398,6 +400,42 @@ function CodingDetail({ detail }) {
   );
 }
 
+function VisionDetail({ detail, color = "fuchsia" }) {
+  return (
+    <div className="space-y-4">
+      <Panel title={detail.type === "egocentric" ? "Egocentric Intelligence" : "Bunnies Mode Vision Infrastructure"} badge={detail.type === "egocentric" ? "POV Interaction Data" : "Production Vision"} badgeColor={color}>
+        <p className="text-[12.5px] leading-6 text-zinc-400">{detail.intro}</p>
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {detail.capabilities.map((capability) => (
+            <span key={capability} className="rounded-sm border border-white/10 bg-white/[0.03] px-2 py-1 font-mono text-[9px] text-zinc-400">
+              {capability}
+            </span>
+          ))}
+        </div>
+      </Panel>
+      <Panel title="Category Detail" badge={`${detail.categories.length} groups`} badgeColor={color}>
+        <div className="grid gap-3 md:grid-cols-2">
+          {detail.categories.map((category) => (
+            <motion.div
+              key={category.name}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.42, ease: "easeOut" }}
+              className="rounded-lg border border-white/10 bg-black/35 p-4"
+            >
+              <h5 className="text-sm font-semibold text-white">{category.name}</h5>
+              <p className="mt-2 text-[11.5px] leading-6 text-zinc-400">{category.focus}</p>
+              <p className="mt-3 border-t border-white/10 pt-3 font-mono text-[9.5px] leading-5 text-zinc-500">
+                Best suited for: {category.bestFor}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </Panel>
+    </div>
+  );
+}
+
 function Callout({ label, text, color = "emerald" }) {
   const styles = {
     emerald: "border-emerald-500/25 bg-emerald-950/35 text-emerald-200/75",
@@ -440,6 +478,8 @@ function CorpusDetail({ tab }) {
   if (tab.detail.type === "textbook") return <TextbookDetail detail={tab.detail} />;
   if (tab.detail.type === "qa") return <QaDetail detail={tab.detail} />;
   if (tab.detail.type === "coding") return <CodingDetail detail={tab.detail} />;
+  if (tab.detail.type === "image") return <VisionDetail detail={tab.detail} color="fuchsia" />;
+  if (tab.detail.type === "egocentric") return <VisionDetail detail={tab.detail} color="lime" />;
   return <GenericDetail tab={tab} />;
 }
 
@@ -471,7 +511,7 @@ export default function CorpusSection() {
       dark
       eyebrow="Corpus"
       title="The training data your models learn from. Made visible."
-      copy="Six proprietary corpus collections — audio, video, textbooks, healthcare, Q&A and coding. Expert-curated, categorized, and available for enterprise LLM training."
+      copy="Eight proprietary corpus collections — audio, video, textbooks, healthcare, Q&A, coding, image, and egocentric data. Expert-curated, categorized, and available for enterprise AI training."
     >
       <div className="mt-9 flex flex-wrap gap-2">
           {datasets.map((tab) => (

@@ -49,6 +49,26 @@ const tagColors = {
     featBody:  "text-black/70",
     icon:      "text-indigo-300",
   },
+  fuchsia: {
+    accent:    "text-fuchsia-400",
+    proofBg:   "border-fuchsia-700/30 text-fuchsia-300/80",
+    proofDot:  "bg-fuchsia-400",
+    nLabel:    "text-fuchsia-400",
+    tabActive: "border-fuchsia-400/60 text-fuchsia-300 bg-fuchsia-950/40",
+    featured:  "border-fuchsia-300/50 bg-fuchsia-300 text-black",
+    featBody:  "text-black/70",
+    icon:      "text-fuchsia-300",
+  },
+  lime: {
+    accent:    "text-lime-400",
+    proofBg:   "border-lime-700/30 text-lime-300/80",
+    proofDot:  "bg-lime-400",
+    nLabel:    "text-lime-400",
+    tabActive: "border-lime-400/60 text-lime-300 bg-lime-950/40",
+    featured:  "border-lime-300/50 bg-lime-300 text-black",
+    featBody:  "text-black/70",
+    icon:      "text-lime-300",
+  },
 };
 
 // ─── single USP card ──────────────────────────────────────────────────────────
