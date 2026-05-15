@@ -33,7 +33,7 @@ const pipeline = [
     title: "RLHF & Reward Modeling",
     badge: "Human-Verified",
     copy:
-      "1.9M+ hours real industry audio · dual-channel · industry-tagged · WER-tracked.",
+      "1.96M+ hours real industry audio · dual-channel · industry-tagged · WER-tracked.",
   },
   {
     title: "Medical AI Training Data",

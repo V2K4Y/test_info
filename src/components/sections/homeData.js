@@ -14,7 +14,7 @@ export const heroContent = {
   ],
  
   subtext:
-    "InfoBay engineers the expert-verified training data, annotation infrastructure, and evaluation systems that make AI accurate, factual, and production-ready — grounded in 1.91M+ hours of multilingual audio across 40+ languages, 1.6M+ patient medical records, academic textbooks in 15 languages, and 64K+ coding problems.",
+    "InfoBay engineers the expert-verified training data, annotation infrastructure, and evaluation systems that make AI accurate, factual, and production-ready — grounded in 1.96M+ hours of multilingual audio across 40+ languages, 1.6M+ patient medical records, academic textbooks in 15 languages, and 64K+ coding problems.",
  
   ctas: [
     { label: "Request a Model Quality Audit", href: "#contact",    variant: "primary" },
@@ -250,11 +250,11 @@ export const corpusTabs = [
       "Call center, podcast, and speech intelligence datasets with premium metadata for gender, age, industry, channel, dialect, and language.",
     accent: "from-cyan-300/30 to-blue-400/10",
     metrics: [
-      ["1.96M+", "total audio hours"],
-      ["1,912,393", "call center hours"],
-      ["57,568", "podcast hours"],
+      ["1.91M", "call center hours"],
+      ["57K", "podcast hours"],
       ["12", "Podcast languages"],
-      ["57+", "languages"],
+      ["35+", "more languages"],
+      ["4", "audio refining steps"],
       ["Dual", "channel support"],
     ],
     tableTitle: "High-volume coverage",
@@ -539,9 +539,9 @@ export const corpusTabs = [
       ["35K+", "books"],
       ["2.4B+", "words"],
       ["15", "languages"],
-      ["5,000+", "subjects"],
-      ["12,125", "English books"],
-      ["6,307", "Bahasa books"],
+      ["5K+", "subjects"],
+      ["12K", "English books"],
+      ["6K", "Bahasa books"],
     ],
     tableTitle: "Language inventory",
     table: [
@@ -671,7 +671,7 @@ export const corpusTabs = [
       ["~1B", "tokens"],
       ["9,453", "DSA codebases"],
       ["1,291", "SQL codebases"],
-      ["64,853", "total problems"],
+      ["64K", "Total problems"],
       ["637", "machine coding and LLD"],
     ],
     tableTitle: "Codebase inventory",
