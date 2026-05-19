@@ -33,7 +33,7 @@ const pipeline = [
     title: "RLHF & Reward Modeling",
     badge: "Human-Verified",
     copy:
-      "1.96M+ hours real industry audio · dual-channel · industry-tagged · WER-tracked.",
+      "2.1M+ hours real industry audio · dual-channel · industry-tagged · WER-tracked.",
   },
   {
     title: "Medical AI Training Data",
@@ -45,7 +45,7 @@ const pipeline = [
     title: "Code & Reasoning Datasets",
     badge: "Coding",
     copy:
-      "64K+ DSA problems · 9 languages · 25M tokens · curated, not scraped.",
+      "12K+ DSA problems · 9 languages · 25M tokens · curated, not scraped.",
   },
   {
     title: "Factuality Auditing",
