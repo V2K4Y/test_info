@@ -8,6 +8,32 @@ import { contactSchema, contactInitialValues } from "@/lib/validation/contact";
 import { contactServices } from "@/lib/config/contact";
 import { buildPhone } from "@/lib/utils/phone";
 
+function FloatingField({ id, name, label, type = "text", as, rows }) {
+  return (
+    <div>
+      <div className="floating-field">
+        <Field
+          id={id}
+          name={name}
+          type={type}
+          as={as}
+          rows={rows}
+          placeholder=" "
+          className={`floating-input ${as === "textarea" ? "min-h-32 resize-none" : ""}`}
+        />
+        <label className="floating-label" htmlFor={id}>
+          {label}
+        </label>
+      </div>
+      <ErrorMessage
+        name={name}
+        component="p"
+        className="mt-1 text-xs text-red-400"
+      />
+    </div>
+  );
+}
+
 export default function ContactForm() {
   return (
     <Formik
@@ -33,93 +59,25 @@ export default function ContactForm() {
             toast.success("We will reach out soon.");
             resetForm();
           } else {
-            toast.error(result.error || "Failed to send. Please try again.");
+            toast.error("Unsuccessful, please try again.");
           }
         } catch (error) {
-          toast.error("Failed to send. Please try again.");
+          toast.error("Unsuccessful, please try again.");
         } finally {
           setSubmitting(false);
         }
       }}
     >
       {({ values, isSubmitting, setFieldValue }) => (
-        <Form className="grid grid-cols-1 gap-5 rounded-xl border border-white/10 bg-zinc-950/90 px-5 py-6 shadow-[0_24px_80px_rgba(0,0,0,0.55)] backdrop-blur md:px-8 md:py-8">
-          <div>
-            <label className="text-sm font-medium" htmlFor="contact-name">
-              Name*
-            </label>
-            <Field
-              id="contact-name"
-              name="name"
-              type="text"
-              placeholder="Enter your name"
-              className="w-full rounded-md border border-white/10 bg-black px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-300/70 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
-            />
-            <ErrorMessage
-              name="name"
-              component="p"
-              className="mt-1 text-xs text-red-400"
-            />
-          </div>
+        <Form className="premium-surface grid grid-cols-1 gap-5 rounded-xl bg-slate-950/88 px-5 py-6 backdrop-blur md:px-8 md:py-8">
+          <FloatingField id="contact-name" name="name" label="Name*" />
+          <FloatingField id="contact-company" name="company" label="Company Name*" />
+          <FloatingField id="contact-title" name="title" label="Job Title*" />
+          <FloatingField id="contact-email" name="email" label="Work Email*" type="email" />
 
           <div>
-            <label className="text-sm font-medium" htmlFor="contact-company">
-              Company Name*
-            </label>
-            <Field
-              id="contact-company"
-              name="company"
-              type="text"
-              placeholder="Enter your company name"
-              className="w-full rounded-md border border-white/10 bg-black px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-300/70 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
-            />
-            <ErrorMessage
-              name="company"
-              component="p"
-              className="mt-1 text-xs text-red-400"
-            />
-          </div>
-
-          <div>
-            <label className="text-sm font-medium" htmlFor="contact-title">
-              Job Title*
-            </label>
-            <Field
-              id="contact-title"
-              name="title"
-              type="text"
-              placeholder="Enter your job title"
-              className="w-full rounded-md border border-white/10 bg-black px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-300/70 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
-            />
-            <ErrorMessage
-              name="title"
-              component="p"
-              className="mt-1 text-xs text-red-400"
-            />
-          </div>
-
-          <div>
-            <label className="text-sm font-medium" htmlFor="contact-email">
-              Work Email*
-            </label>
-            <Field
-              id="contact-email"
-              name="email"
-              type="email"
-              placeholder="Enter your work email"
-              className="w-full rounded-md border border-white/10 bg-black px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-300/70 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
-            />
-            <ErrorMessage
-              name="email"
-              component="p"
-              className="mt-1 text-xs text-red-400"
-            />
-          </div>
-
-          <div>
-            <label className="text-sm font-medium">Official Mobile Number</label>
-            <div className="mt-2 flex gap-2">
-              <div className="shrink-0">
+            <div className="flex gap-2 items-center">
+              <div className="min-h-32">
                 <label className="sr-only" htmlFor="contact-country-code">
                   Country code
                 </label>
@@ -132,24 +90,10 @@ export default function ContactForm() {
               </div>
 
               <div className="flex-1 min-w-0">
-                <label className="sr-only" htmlFor="contact-phone-number">
-                  Phone number
-                </label>
-                <Field
-                  id="contact-phone-number"
-                  name="phoneNumber"
-                  type="tel"
-                  placeholder="Phone number"
-                  className="w-full rounded-md border border-white/10 bg-black px-4 py-3 text-sm text-white placeholder:text-zinc-600 focus:border-cyan-300/70 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
-                />
-                <ErrorMessage
-                  name="phoneNumber"
-                  component="p"
-                  className="mt-1 text-xs text-red-400"
-                />
+                <FloatingField id="contact-phone-number" name="phoneNumber" label="Mobile Number" type="tel" />
               </div>
             </div>
-            <p className="mt-1 text-xs text-zinc-400">
+            <p className="mt-1 text-xs text-zinc-300/75">
               Type to search your country code, or scroll the list.
             </p>
           </div>
@@ -158,16 +102,19 @@ export default function ContactForm() {
             <label className="text-sm font-medium">
               What can we help with? Select all that apply*
             </label>
-            <div className="mt-2 grid gap-2 text-sm text-zinc-100">
+            <div className="mt-2 grid grid-cols-1 gap-2 text-sm text-zinc-100 min-[420px]:grid-cols-2">
               {contactServices.map((item) => (
-                <label key={item} className="flex items-center gap-2">
+                <label
+                  key={item}
+                  className="flex min-h-10 items-center gap-2 rounded-md border border-white/10 bg-black/60 px-3 py-2 text-xs leading-snug text-zinc-200 transition hover:border-cyan-300/30 hover:bg-cyan-300/5"
+                >
                   <Field
                     type="checkbox"
                     name="services"
                     value={item}
-                    className="rounded border-white/20 bg-black text-cyan-300 focus:ring-cyan-300/40"
+                    className="h-3.5 w-3.5 shrink-0 rounded border-white/20 bg-black text-cyan-300 focus:ring-cyan-300/40"
                   />
-                  {item}
+                  <span>{item}</span>
                 </label>
               ))}
             </div>
@@ -178,24 +125,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div>
-            <label className="text-sm font-medium" htmlFor="contact-message">
-              Message*
-            </label>
-            <Field
-              as="textarea"
-              id="contact-message"
-              name="message"
-              placeholder="Type your message here"
-              rows={4}
-              className="w-full rounded-md border border-white/10 bg-black px-4 py-3 text-sm text-white resize-none placeholder:text-zinc-600 focus:border-cyan-300/70 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
-            />
-            <ErrorMessage
-              name="message"
-              component="p"
-              className="mt-1 text-xs text-red-400"
-            />
-          </div>
+          <FloatingField id="contact-message" name="message" label="Message*" as="textarea" rows={4} />
 
           <button
             type="submit"
