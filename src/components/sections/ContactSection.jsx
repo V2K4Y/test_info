@@ -18,11 +18,11 @@ export default function ContactSection() {
             title="Start with a model quality audit."
             copy="Tell us what you are building, what data you need, and where your model is underperforming. InfoBay will respond with the right corpus, sample, or custom data path."
           />
-          <div className="mt-8 rounded-xl border border-white/10 bg-white/[0.04] p-6">
+          {/* <div className="mt-8 rounded-xl border border-white/10 bg-white/[0.04] p-6">
             <p className="text-sm leading-7 text-zinc-300">
               5-business-day audit turnaround, enterprise NDA support, sample packs where available, and custom engagement scoping for domain-specific datasets.
             </p>
-          </div>
+          </div> */}
         </div>
         <ContactForm />
       </div>
