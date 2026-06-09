@@ -6,11 +6,12 @@
 // ];
 
 export const heroContent = {
-  eyebrow: "Training Intelligence Infrastructure",
+  eyebrow: "AI Training Data & Annotation Services",
  
+  
   headline: [
-    "Enterprise AI is only as trustworthy as",
-    "what it learned.",        
+  "Enterprise AI Training Data —",
+  "Expert-Verified Datasets for LLM Pre-Training & Alignment",
   ],
  
   subtext:
@@ -245,7 +246,7 @@ export const corpusTabs = [
     id: "audio",
     label: "Audio",
     icon: "",
-    title: "2.1M+ hours of multilingual audio",
+    title: "Multilingual Audio Dataset — 2.1M+ Hours, 57 Languages",
     summary:
       "Call center, podcast, and speech intelligence datasets with premium metadata for gender, age, industry, channel, dialect, and language.",
     accent: "from-cyan-300/30 to-blue-400/10",
@@ -325,7 +326,7 @@ export const corpusTabs = [
     id: "video",
     label: "Video",
     icon: "",
-    title: "132K+ hours of structured and UGC video",
+    title: "Video Training Data — 132K+ Hours STEM & UGC for Multimodal AI",
     summary:
       "STEM classroom and vertical UGC video designed for multimodal grounding, visual reasoning, and cross-modal alignment.",
     accent: "from-emerald-300/25 to-cyan-400/10",
@@ -385,7 +386,7 @@ export const corpusTabs = [
     id: "healthcare",
     label: "Healthcare",
     icon: "",
-    title: "53M+ healthcare files from verified providers",
+    title: "Medical AI Training Data — 53M+ DICOM Images, 1.6M Patient Records",
     summary:
       "De-identified diagnostic imaging, clinical records, findings, prescriptions, pathology, and longitudinal care datasets.",
     accent: "from-rose-300/25 to-cyan-400/10",
@@ -531,7 +532,7 @@ export const corpusTabs = [
     id: "textbook",
     label: "Textbook",
     icon: "",
-    title: "2.5B+ words from 38K+ textbooks",
+    title: "Textbook Corpus — 2.5B+ Words, 38K+ Books, 15 Languages",
     summary:
       "Licensed textbook corpus spanning 15 languages, 5K+ subjects, and interwoven visuals for contextual model learning.",
     accent: "from-amber-300/25 to-cyan-400/10",
@@ -605,7 +606,7 @@ export const corpusTabs = [
     id: "qa",
     label: "Q&A",
     icon: "",
-    title: "6.5M+ human-verified Q&A pairs",
+    title:"Q&A Training Dataset — 6.5M+ Human-Verified Pairs, 1.8B+ Tokens",
     summary:
       "Reasoning-heavy question-answer data for STEM, non-STEM, multilingual training, evaluation, and instruction tuning.",
     accent: "from-violet-300/25 to-cyan-400/10",
@@ -662,7 +663,7 @@ export const corpusTabs = [
     id: "coding",
     label: "Coding",
     icon: "",
-    title: "12K+ codebases and roughly 1B tokens",
+    title: "Coding Dataset — 12K+ DSA Problems, 9 Languages, 25M Tokens",
     summary:
       "DSA, SQL, machine coding, low-level design, competitive mathematics, and repository-history datasets.",
     accent: "from-sky-300/25 to-indigo-400/10",
@@ -722,7 +723,7 @@ export const corpusTabs = [
     id: "image",
     label: "Image",
     icon: "",
-    title: "2.5M+ images across 11 vision categories",
+    title: "Image Training Data — 2.5M+ Images Across 11 Vision Categories",
     summary:
       "Bunnies Mode is InfoBay's image intelligence platform for production-grade vision, OCR, segmentation, VQA, grounding, and multimodal learning.",
     accent: "from-fuchsia-300/25 to-cyan-400/10",
@@ -783,7 +784,7 @@ export const corpusTabs = [
     id: "egocentric",
     label: "Egocentric",
     icon: "",
-    title: "100K+ hours of egocentric interaction data",
+    title: "Egocentric AI Training Data — 100K+ Hours for Embodied & Spatial AI",
     summary:
       "User-centric interaction datasets for spatial reasoning, action understanding, object manipulation, and agent training.",
     accent: "from-lime-300/25 to-emerald-400/10",
@@ -1144,9 +1145,9 @@ export const capabilities = [
 ];
 
 export const whyItems = [
-  ["A corpus that compounds — not a project that concludes.", "InfoBay's 2.1M+ audio hours, 1.6M+ patient records, 15-language textbook library, and 64K+ coding solutions accumulated over years of production engagements. Every project adds to a retained, quality-scored asset no competitor can replicate quickly. When you engage InfoBay, you start from millions of verified examples in your domain — not from zero.", "vs. Scale AI (Meta-controlled, ~10% error rate) · vs. Innodata (synthetic-only) · vs. Surge AI (zero corpus visibility)"],
-  ["Epistemic provenance — every training example traceable to its source.", "Every textbook carries its ISBN. Every audio hour carries its language code, industry vertical, channel type. Every medical record carries its modality, specialty, and clinical fields. Every code problem carries its language and algorithmic category. Traceability is not a compliance feature — it is the mechanism that makes training data trustworthy at the root.", "EU AI Act Article 10: High-risk AI must document training data sources. InfoBay's corpus is built for this."],
-  ["Outcomes measured in model behavior — not delivery volume.", "We measure success in benchmark deltas, factuality improvement percentages, and evaluation pass rates. FineWeb-Edu demonstrated educational text improves ARC by 24% and MMLU by 12% over web text. Our textbooks achieve that quality without filtering. Our audio provides real-world grounding no open dataset matches. Our medical data is the only Indian hospital corpus with paired DICOM+PDF at this volume.", "FineWeb-Edu NeurIPS 2024: educational text -> +24% ARC, +12% MMLU. InfoBay textbooks: educational by source."],
+  ["Why Choose InfoBay.AI Over Other AI Data Annotation Providers.", "InfoBay's 2.1M+ audio hours, 1.6M+ patient records, 15-language textbook library, and 64K+ coding solutions accumulated over years of production engagements. Every project adds to a retained, quality-scored asset no competitor can replicate quickly. When you engage InfoBay, you start from millions of verified examples in your domain — not from zero.", "vs. Scale AI (Meta-controlled, ~10% error rate) · vs. Innodata (synthetic-only) · vs. Surge AI (zero corpus visibility)"],
+  ["Epistemic Provenance — Every AI Training Example Traceable to Its Source.", "Every textbook carries its ISBN. Every audio hour carries its language code, industry vertical, channel type. Every medical record carries its modality, specialty, and clinical fields. Every code problem carries its language and algorithmic category. Traceability is not a compliance feature — it is the mechanism that makes training data trustworthy at the root.", "EU AI Act Article 10: High-risk AI must document training data sources. InfoBay's corpus is built for this."],
+  ["Outcomes Measured in Model Benchmarks — Not Delivery Volume.", "We measure success in benchmark deltas, factuality improvement percentages, and evaluation pass rates. FineWeb-Edu demonstrated educational text improves ARC by 24% and MMLU by 12% over web text. Our textbooks achieve that quality without filtering. Our audio provides real-world grounding no open dataset matches. Our medical data is the only Indian hospital corpus with paired DICOM+PDF at this volume.", "FineWeb-Edu NeurIPS 2024: educational text -> +24% ARC, +12% MMLU. InfoBay textbooks: educational by source."],
   // ["Global delivery", "Distributed centers support multilingual, round-the-clock data production for demanding enterprise timelines."],
 ];
 // export const whyItems = [

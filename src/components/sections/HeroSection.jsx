@@ -133,21 +133,22 @@ export default function HeroSection() {
             </motion.p>
 
             {/* .hhl — main heading, Cormorant Garamond, sage italic on second line */}
+          
             <motion.h1
               {...fadeUp(0.08)}
               className="mb-[1.5rem]"
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
-                fontSize:   "clamp(2.5rem, 5vw, 3.9rem)",
-                lineHeight: 1.08,
-                color:      "#ffffff",
-                fontWeight: 500,
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize:   "clamp(2.5rem, 5vw, 3.9rem)",
+                  lineHeight: 1.08,
+                  color:      "#ffffff",
+                  fontWeight: 500,
               }}
             >
               {headline[0]}
               <br />
               <em style={{ fontStyle: "italic", color: "#a5f3fc" }}>
-                {headline[1]}
+               {headline[1]}
               </em>
             </motion.h1>
 
