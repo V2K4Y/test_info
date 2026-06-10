@@ -10,7 +10,7 @@ const AboutUs = () => {
         <div className="pointer-events-none absolute inset-0 z-0">
           <Image
             src="/aboutus.jpg"
-            alt="AI visualization"
+            alt="InfoBay.AI enterprise AI training data company"
             fill
             priority
             sizes="100vw"
@@ -28,7 +28,7 @@ const AboutUs = () => {
           </span>
 
           <h1 className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-            Accelerating the Future of Artificial Intelligence
+            About InfoBay.AI — Enterprise AI Data Infrastructure Company
           </h1>
           <p className="mt-4 md:mt-5 max-w-3xl text-sm md:text-base text-zinc-300 leading-relaxed">
             InfoBay AI (formerly EduGorilla) partners with forward-thinking AI innovators to build the
@@ -51,7 +51,7 @@ const AboutUs = () => {
                 Exceptional models demand exceptional data.
               </h2>
               <p className="mt-3 text-sm md:text-base text-zinc-300 leading-relaxed">
-                Why InfoBay AI? <br /> A continuously expanding global knowledge
+                Why Enterprise AI Teams Choose InfoBay.AI for Training Data? <br /><br /> A continuously expanding global knowledge
                 repository. InfoBay AI maintains one of the industry’s most
                 extensive and rigorously validated knowledge collections. This
                 ever-growing repository fuels more accurate, stable, and
@@ -91,7 +91,7 @@ const AboutUs = () => {
       <section className="mx-auto max-w-6xl px-4 md:px-6 py-12 md:py-16 space-y-6 md:space-y-8">
         <div className="max-w-3xl">
           <h2 className="text-lg md:text-xl font-semibold tracking-tight">
-            Advancing Benchmark Performance with Precision-Engineered Data
+            Advancing MMLU, GAIA & GPQA Benchmarks with Expert-Verified AI Training Data
           </h2>
           <p className="mt-3 text-sm md:text-base text-zinc-300 leading-relaxed">
             InfoBay AI’s datasets are crafted to move the needle on the world’s
@@ -176,7 +176,7 @@ const AboutUs = () => {
             {/* Left: main narrative */}
             <div>
               <h2 className="text-lg md:text-xl font-semibold tracking-tight">
-                Driving AI Innovation Through Advanced Data Infrastructure
+                Enterprise AI Data Infrastructure — Annotation, Curation & LLM Factuality Services
               </h2>
               <p className="mt-3 text-sm md:text-base text-zinc-300 leading-relaxed max-w-3xl">
                 We bridge cutting-edge research with practical deployment.

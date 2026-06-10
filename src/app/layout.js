@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "InfoBay.AI",
+  title: "AI Training Data & Annotation Services | InfoBay.AI",
   description: "Accelerate the frontier of AI development with enterprise-grade, deeply curated datasets engineered to enhance pre-training, alignment, and real-world performance.",
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.className} antialiased bg-black text-white`}>
         <Header />
         {children}
-        <ToastContainer position="top-right" theme="dark"/>
+        <ToastContainer position="top-right" theme="dark" />
         <NewFooter />
       </body>
     </html>

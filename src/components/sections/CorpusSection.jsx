@@ -509,8 +509,8 @@ export default function CorpusSection() {
     <SectionShell
       id="corpus"
       dark
-      eyebrow="Corpus"
-      title="The training data your models learn from. Made visible."
+      eyebrow="AI Training Data Corpus"
+      title="Our AI Training Data Corpus — Audio, Medical, Coding & Textbook Datasets"
       copy="Eight proprietary corpus collections — audio, video, textbooks, healthcare, Q&A, coding, image, and egocentric data. Expert-curated, categorized, and available for enterprise AI training."
     >
       <div className="mt-9 flex flex-wrap gap-2">
@@ -542,8 +542,12 @@ export default function CorpusSection() {
           <div className={`bg-gradient-to-br ${current.accent} p-5 md:p-8`}>
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
               <div>
+                {/* <p className="text-xs uppercase tracking-[0.25em] text-cyan-100/80">{current.label} corpus</p>
+                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{current.title}</h3> */}
                 <p className="text-xs uppercase tracking-[0.25em] text-cyan-100/80">{current.label} corpus</p>
-                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{current.title}</h3>
+                <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                 {current.title}
+                </h3>
                 <p className="mt-4 text-base leading-8 text-zinc-200">{current.summary}</p>
               </div>
               <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
