@@ -9,7 +9,7 @@ import { SectionShell } from "./SectionPrimitives";
 const centerOptionalDetails = {};
 
 const imageMap = {
-  Lucknow: "/global_presence/Lucknow.jpg",
+  Lucknow: "/global_presence/Lucknow.png",
   Kathmandu: "/global_presence/Kathmandu.png",
   Jakarta: "/global_presence/Jakarta.png",
 };
